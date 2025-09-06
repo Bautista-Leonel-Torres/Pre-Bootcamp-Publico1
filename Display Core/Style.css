@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+}
+#container{
+    background-color: white;
+    width: 1000px;
+    height: 1000px;
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+img{
+    width: 200px;
+    height: 100px;
+}
+.caja1{
+    background-color: rgb(255, 204, 0);
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.caja2{
+    background-color: rgb(102, 203, 255);
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.caja3{
+    background-color: rgb(255, 103, 102);
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.caja4{
+    background-color: #99ff99;
+    width: 1000px;
+    height: 50px;
+    text-align: center;
+}

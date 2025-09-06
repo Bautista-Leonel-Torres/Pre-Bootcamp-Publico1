@@ -1,0 +1,43 @@
+<html>
+<body>
+	<div id='background'  >
+        <div id='gatito' style='position:absolute; top:100px; left:550px; background: url("img/abajo1.png") no-repeat; width:60px; height:50px; background-size: contain;'></div>
+    </div>  
+    <script type="text/javascript">
+	    var posicionIzq = 550, posicionArriba = 100;
+		var maxAbajo = 800, maxDerecha = 800, minArriba = 0, minIzquierda = 0;
+
+    	function actualizar(){
+    		document.getElementById("gatito").style.left = posicionIzq+"px";
+    		document.getElementById("gatito").style.top = posicionArriba+"px";
+    	}
+
+		document.onkeydown = function(e){
+			console.log(e);
+			if(e.keyCode == 37) { // Izquierda
+				posicionIzq = posicionIzq - 10; 
+				if (posicionIzq < minIzquierda) {
+					posicionIzq = minIzquierda;
+				}
+			} else if (e.keyCode == 38) { // Arriba
+				posicionArriba = posicionArriba - 10;
+				if (posicionArriba < minArriba) {
+					posicionArriba = minArriba;
+				} 
+			} else if (e.keyCode == 39) { // Derecha
+				posicionIzq = posicionIzq + 10;
+				if (posicionIzq > maxDerecha)   {
+					posicionIzq = maxDerecha;    		
+				}
+			} else if (e.keyCode == 40) { // Abajo
+				posicionArriba = posicionArriba + 10;
+				if (posicionArriba > maxAbajo) {
+					posicionArriba = maxAbajo;
+				}
+			}
+			// ...
+			actualizar();
+		}
+    </script>
+</body>
+</html>
